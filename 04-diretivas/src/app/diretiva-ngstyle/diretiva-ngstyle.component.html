@@ -1,0 +1,19 @@
+<!-- <button
+    [style.background]="ativo ? 'blue' : 'grey'"
+    [style.color]="ativo ? 'white' : 'black'"
+    [style.fontWeight]="ativo ? 'bold' : 'normal'"
+    [style.fontSize]="tamanhoFonte + 'px'"
+    (click)="mudarAtivo()"
+>mudar atributo ativo</button> -->
+
+<input type="text" [(ngModel)]="tamanhoFonte">
+
+<button
+    [ngStyle]="{
+    'background': ativo ? 'blue' : 'grey',
+    'color': ativo ? 'white' : 'black',
+    'fontWeight': ativo ? 'bold' : 'normal',
+    'fontSize': tamanhoFonte + 'px'
+    }"
+    (click)="mudarAtivo()"
+>mudar atributo ativo</button>
