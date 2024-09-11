@@ -9,12 +9,15 @@ import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.co
 import { DiretivaNgstyleComponent } from './diretiva-ngstyle/diretiva-ngstyle.component';
 import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
 import { ExemploNgcontentComponent } from './exemplo-ngcontent/exemplo-ngcontent.component';
+import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
+import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretivas-customizadas.component';
+import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DiretivaNgswitchComponent, TooltipModule, CommonModule, DiretivaNgforComponent, DiretivaNgifComponent, DiretivaNgclassComponent, DiretivaNgstyleComponent, OperadorElvisComponent, ExemploNgcontentComponent],
+  imports: [RouterOutlet, DiretivaNgswitchComponent, TooltipModule, CommonModule, DiretivaNgforComponent, DiretivaNgifComponent, DiretivaNgclassComponent, DiretivaNgstyleComponent, OperadorElvisComponent, ExemploNgcontentComponent, FundoAmareloDirective, DiretivasCustomizadasComponent, HighlightMouseDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
