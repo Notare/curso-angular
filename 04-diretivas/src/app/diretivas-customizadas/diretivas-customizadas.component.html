@@ -1,3 +1,13 @@
 <p appFundoAmarelo>texto fundo amarelo</p>
 <p appHighlightMouse>texto com highlight quando passo o mouse</p>
 <p [appDestaque]="'red'" [corPadrao]="'grey'">texto com highlight com cores customizadas</p>
+
+<div *ngIf="mostrarCursos">
+    lista de cursos aqui
+</div>
+<div *ngElse="!mostrarCursos">
+    Não existem cursos para serem listados.
+</div>
+
+<br>
+<button (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>

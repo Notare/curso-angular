@@ -13,12 +13,13 @@ import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
 import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretivas-customizadas.component';
 import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 import { DestaqueDirective } from './shared/destaque.directive';
+import { NgElseDirective } from './shared/ng-else.directive';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DiretivaNgswitchComponent, TooltipModule, CommonModule, DiretivaNgforComponent, DiretivaNgifComponent, DiretivaNgclassComponent, DiretivaNgstyleComponent, OperadorElvisComponent, ExemploNgcontentComponent, FundoAmareloDirective, DiretivasCustomizadasComponent, HighlightMouseDirective, DestaqueDirective],
+  imports: [RouterOutlet, DiretivaNgswitchComponent, TooltipModule, CommonModule, DiretivaNgforComponent, DiretivaNgifComponent, DiretivaNgclassComponent, DiretivaNgstyleComponent, OperadorElvisComponent, ExemploNgcontentComponent, FundoAmareloDirective, DiretivasCustomizadasComponent, HighlightMouseDirective, DestaqueDirective, NgElseDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
