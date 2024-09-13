@@ -1,8 +1,9 @@
 <form #formulario="ngForm" (ngSubmit)="enviar(formulario)">
-    <div class="form-group">
+    <div class="form-group" [class.has-error]="!nome.value && nome.touched">
         <label for="nome">nome</label>
-        <input type="text" class="form-control" id="nome" placeholder="digite seu nome" name="nome" ngModel [(ngModel)]="usuario.nome" #nome>
+        <input type="text" class="form-control" id="nome" placeholder="digite seu nome" name="nome" ngModel [(ngModel)]="usuario.nome" #nome="ngModel" >
         <!-- <div>{{ nome.className }}</div>     -->
+         <div *ngIf="!nome.valid">nome é obrigatorio</div>
     </div>
 
     <div class="form-group">
@@ -10,5 +11,6 @@
         <input type="email" class="form-control" id="email" placeholder="digite seu email" name="email" ngModel [(ngModel)]="usuario.email" required email>    
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="formulario.invalid">Submit</button>
+    <app-form-debug [form]="formulario"></app-form-debug>
 </form>
