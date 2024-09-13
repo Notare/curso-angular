@@ -1,0 +1,13 @@
+<h1>exemplos pipes</h1>
+
+<p>titulo: {{ livro.titulo | uppercase | camelCase }} </p>
+<p>nota: {{ livro.nota | number:'1.1-1' }} </p>
+<p>paginas: {{ livro.numeroPaginas }} </p>
+<p>preço: {{ livro.preco | currency:'BRL' }} </p>
+<p>data lançamento: {{ livro.dataLancamento | date:'dd-MMM-yyyy' }} </p>
+<p>url: {{ livro.url }} </p>
+<br>
+<p>livro: {{ livro | json }} </p>
+
+<p>{{ valorAsync | async }}</p>
+<p>{{ valorAsync2 | async }}</p>
