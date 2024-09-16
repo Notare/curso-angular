@@ -1,23 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { FormDebugComponent } from '../form-debug/form-debug.component';
-
+import { Form, FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-template-form',
   standalone: true,
-  imports: [FormsModule, CommonModule, FormDebugComponent],
+  imports: [FormsModule, CommonModule],
   templateUrl: './template-form.component.html',
-  styleUrl: './template-form.component.css'
+  styleUrl: './template-form.component.css',
 })
 export class TemplateFormComponent {
   usuario: any = {
-    nome: 'test',
-    email: 'test@email.com'
-  }
+    nome: null,
+    email: null,
+  };
 
-  enviar(formulario: any) {
-    console.log(formulario);
-    // console.log(this.usuario);
+  enviarForm(form: any) {
+    console.log(form);
+    console.log(this.usuario);
   }
 }
